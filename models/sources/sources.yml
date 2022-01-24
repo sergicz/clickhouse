@@ -3,7 +3,6 @@ version: 2
 sources:
 
     - name: dbgen
-      database: db
       schema: db
       tags: ["dbgen"]      
       loader: S3
