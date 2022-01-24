@@ -7,17 +7,7 @@ yc managed-clickhouse cluster create --name sergicz1 --environment production --
 ![image](https://user-images.githubusercontent.com/98316269/150786007-57c3eedf-a0dd-422b-b810-15fcb84076ce.png)
 
 3. Profiles.yml имеет такой вид:
-clickhouse_starschema:
-  target: dev
-  outputs:
-    dev:
-      type: clickhouse
-      schema: db
-      host: rc1c-njfxh96x4eg7o27c.mdb.yandexcloud.net
-      port: 9440
-      user: clickhouse
-      password: clickhouse
-      secure: True
+![image](https://user-images.githubusercontent.com/98316269/150786144-3cfe5972-5d47-46c0-a3ee-d2db92b6f1bc.png)
      
 4. Обнаруженные проблемы:
 - не отработала команда dbt run-operation generate_source --args '{"schema_name": "dbt", "generate_columns": True, "include_descriptions": True}' - вылазит ошибка
