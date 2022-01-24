@@ -29,4 +29,6 @@ Encountered an error while running operation: Database Error
 - не отработало создание суррогатного ключа {{ dbt_utils.surrogate_key(['LO_CUSTKEY', 'C_CUSTKEY', 'S_SUPPKEY']) }} - ругается на регистр функции md5, а после исправления на MD5  на тип string, дальше копаться не стал
 
 - не отрабатывало dbt docs generate - ругался на несколько баз в каталоге, исправил удалением строки database:db в sources.yml
-- не отработали тесты по той же причине что и в лекции - неизвестен тип boolean, дальше копаться не стал
+- не отрабатывали тесты по той же причине что и в лекции - неизвестен тип boolean, добавил test.sql в /usr/local/lib/python3.8/dist-packages/dbt/include/clickhouse/macros/materializations# по статье https://github.com/silentsokolov/dbt-clickhouse/pull/18/commits/888605b19d20e445fc10e17cf6971989400ee236 - заработало
+![image](https://user-images.githubusercontent.com/98316269/150785322-4cca167e-3981-42b1-bc42-db8b263c2690.png)
+
