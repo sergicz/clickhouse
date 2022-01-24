@@ -3,8 +3,10 @@ yc managed-clickhouse cluster create --name sergicz1 --environment production --
 
 2. dbt установился, проинициализировался, dbt debug отработал, данные из S3 в исходные таблицы загрузились (отдельными командами без цикла), DBeaver к базе подключился, модели из Stage и Star отработали - вьюшки и витрина создалась, запросы к витрине выполнились. Результаты запросов в Q2.1.jpg, Q3.3.jpg, Q4.2jpg
 ![image](https://user-images.githubusercontent.com/98316269/150785865-7caf5cb3-ae66-466e-bcaf-ec6914aedc90.png)
+![image](https://user-images.githubusercontent.com/98316269/150785958-f1d449a8-9b94-48a9-8096-ff5ce843d633.png)
+![image](https://user-images.githubusercontent.com/98316269/150786007-57c3eedf-a0dd-422b-b810-15fcb84076ce.png)
 
-4. Profiles.yml имеет такой вид:
+3. Profiles.yml имеет такой вид:
 clickhouse_starschema:
   target: dev
   outputs:
@@ -35,4 +37,3 @@ Encountered an error while running operation: Database Error
 
 - не отрабатывали тесты по той же причине что и в лекции - неизвестен тип boolean, добавил test.sql в /usr/local/lib/python3.8/dist-packages/dbt/include/clickhouse/macros/materializations# по статье https://github.com/silentsokolov/dbt-clickhouse/pull/18/commits/888605b19d20e445fc10e17cf6971989400ee236 - заработало
 ![image](https://user-images.githubusercontent.com/98316269/150785322-4cca167e-3981-42b1-bc42-db8b263c2690.png)
-
