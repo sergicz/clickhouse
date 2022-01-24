@@ -2,7 +2,9 @@
 yc managed-clickhouse cluster create --name sergicz1 --environment production --version 21.11 --network-name default --host type=clickhouse,assign-public-ip=true,zone-id=ru-central1-c --service-account sergicz --clickhouse-resource-preset s2.small --database name=db --clickhouse-disk-size 50G --clickhouse-disk-type network-ssd --user name=clickhouse,password=clickhouse
 
 2. dbt установился, проинициализировался, dbt debug отработал, данные из S3 в исходные таблицы загрузились (отдельными командами без цикла), DBeaver к базе подключился, модели из Stage и Star отработали - вьюшки и витрина создалась, запросы к витрине выполнились. Результаты запросов в Q2.1.jpg, Q3.3.jpg, Q4.2jpg
-3. Profiles.yml имеет такой вид:
+![image](https://user-images.githubusercontent.com/98316269/150785865-7caf5cb3-ae66-466e-bcaf-ec6914aedc90.png)
+
+4. Profiles.yml имеет такой вид:
 clickhouse_starschema:
   target: dev
   outputs:
