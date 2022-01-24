@@ -29,4 +29,4 @@ Encountered an error while running operation: Database Error
 - не отработало создание суррогатного ключа {{ dbt_utils.surrogate_key(['LO_CUSTKEY', 'C_CUSTKEY', 'S_SUPPKEY']) }} - ругается на регистр функции md5, а после исправления на MD5  на тип string, дальше копаться не стал
 
 - не отрабатывало dbt docs generate - ругался на несколько баз в каталоге, исправил удалением строки database:db в sources.yml
-- не отработали тесты по той же причине что и в лекции - неизвестен тип boolean
+- не отработали тесты по той же причине что и в лекции - неизвестен тип boolean, дальше копаться не стал
