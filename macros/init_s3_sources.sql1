@@ -1,0 +1,26 @@
+{% macro init_s3_sources() -%}
+
+    {% set sql %}
+
+                CREATE TABLE src_part
+        (
+                P_PARTKEY       UInt32,
+                P_NAME          String,
+                P_MFGR          LowCardinality(String),
+                P_CATEGORY      LowCardinality(String),
+                P_BRAND         LowCardinality(String),
+                P_COLOR         LowCardinality(String),
+                P_TYPE          LowCardinality(String),
+                P_SIZE          UInt8,
+                P_CONTAINER     LowCardinality(String)
+        )
+        ENGINE = S3('https://storage.yandexcloud.net/otus-dwh/dbgen/part.tbl', 'CSV');
+	
+
+
+    {% endset %}
+    
+    {% set table = run_query(sql) %}
+
+
+{%- endmacro %}
