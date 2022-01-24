@@ -23,6 +23,8 @@ Encountered an error while running operation: Database Error
   
 - не отработало создание суррогатного ключа {{ dbt_utils.surrogate_key(['LO_CUSTKEY', 'C_CUSTKEY', 'S_SUPPKEY']) }} - ругается на регистр функции md5, а после исправления на MD5  на тип string, лечится заменой строки в dbt_utils
 ![image](https://user-images.githubusercontent.com/98316269/150790430-6c2b02e0-21be-4179-a6a8-0e2c2aacedf5.png)
+получаем суррогатный ключ такого вида (только непонятно, это правильно или нет):
+![image](https://user-images.githubusercontent.com/98316269/150791362-72212dbd-38eb-4d90-ab3b-3b73ba8c519d.png)
 
 - не отрабатывало dbt docs generate - ругался на несколько баз в каталоге, исправил удалением строки database:db в sources.yml
 ![image](https://user-images.githubusercontent.com/98316269/150785530-a11d0127-121f-4b2d-ad64-00b5ef520c77.png)
